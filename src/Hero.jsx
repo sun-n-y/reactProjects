@@ -1,4 +1,5 @@
-import heroImg from './assets/hero.svg';
+import reactImg from './assets/reactIcon.svg';
+import viteImg from './assets/viteIcon.svg';
 
 const Hero = () => {
   return (
@@ -8,7 +9,9 @@ const Hero = () => {
           <h1>React Projects</h1>
         </div>
         <div className="img-container">
-          <img src={heroImg} className="img" />
+          <img src={reactImg} className="img" />
+          <span>+</span>
+          <img src={viteImg} className="img" />
         </div>
       </div>
     </section>
