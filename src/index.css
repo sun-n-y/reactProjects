@@ -383,6 +383,7 @@ PROJECTS
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-2);
   transition: var(--transition);
+  position: relative;
 }
 
 .project:hover {
@@ -390,7 +391,13 @@ PROJECTS
   box-shadow: var(--shadow-4);
 }
 
-.project .img {
+.project-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.project .project-img {
   height: 15rem;
   border-top-right-radius: var(--borderRadius);
   border-top-left-radius: var(--borderRadius);
@@ -412,4 +419,30 @@ PROJECTS
   .projects-center {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.repo-link {
+  color: black;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.repo-link:hover {
+  color: gray;
+  transition: var(--transition);
+}
+
+.site-link {
+  color: skyblue;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.site-link:hover {
+  color: gray;
+  transition: var(--transition);
 }
