@@ -3,7 +3,7 @@ import viteImg from './assets/viteIcon.svg';
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="hero-center">
         <div className="hero-title">
           <h1>React Projects</h1>

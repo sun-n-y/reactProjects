@@ -1,3 +1,4 @@
+import Footer from './Footer';
 import Hero from './Hero';
 import Projects from './Projects';
 
@@ -6,6 +7,7 @@ const App = () => {
     <main>
       <Hero />
       <Projects />
+      <Footer />
     </main>
   );
 };
