@@ -65,6 +65,18 @@ html {
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --dark-mode-bg-color: #333;
+  --dark-mode-text-color: #f0f0f0;
+  --backgroundColor: var(--white);
+  --textColor: var(--black);
+  --darkModeTransition: color 0.3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.dark-theme {
+  --backgroundColor: var(--dark-mode-bg-color);
+  --backgroundColor2: rgb(110, 110, 110);
+  --textColor: var(--dark-mode-text-color);
+
 }
 
 body {
@@ -74,6 +86,7 @@ body {
   font-weight: 400;
   line-height: 1;
   color: var(--textColor);
+  transition: var(--darkModeTransition);
 }
 
 p {
@@ -310,8 +323,9 @@ body {
 
 .hero {
   min-height: 40vh;
-  background: var(--white);
+  background: var(--backgroundColor);
   display: grid;
+  grid-template-rows: auto 1fr;
   place-items: center;
   padding: 2rem;
 }
@@ -367,6 +381,7 @@ PROJECTS
 
 .projects {
   padding: 5rem 0;
+  background-color: var(--backgroundColor2);
 }
 
 .projects-center {
@@ -456,7 +471,7 @@ FOOTER
 
 .footer {
   padding: 3rem 0;
-  background-color: white;
+  background-color: var(--backgroundColor);
 }
 
 .footer-center {
@@ -474,6 +489,7 @@ FOOTER
   column-gap: .5rem;
   font-size: clamp(1rem, 2vw, 1.2rem);
   letter-spacing: var(--letterSpacing);
+  color: var(--textColor);
 }
 
 .link:hover {
@@ -482,11 +498,40 @@ FOOTER
 }
 
 .icon {
-  color: black;
+  color: var(--textColor);
   font-size: 2rem;
 }
 
 .icon:hover {
   color: gray;
   transition: var(--transition);
+}
+
+/* 
+========
+Toggle Container
+========
+*/
+
+.toggle-container {
+  width: var(--view-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+}
+
+.dark-toggle {
+  background: transparent;
+  border-color: transparent;
+  width: 5rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  color: var(--textColor);
 }
